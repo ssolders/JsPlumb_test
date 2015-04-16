@@ -12,8 +12,8 @@
 	<div id="topPane">
 		<div id="header">Checking out JsPlumb</div>
 		<div id="info" class="funcButton" onclick="showInfo()"><span>i</span></div>
-		<div id="restorePlumbState" class="funcButton" onclick="loadPlumbState()">Reset graph</div>
-		<div id="savePlumbState" class="funcButton" onclick="savePlumbState()">Save graph</div>
+		<div id="restorePlumbState" class="funcButton borderRadius" onclick="loadPlumbState()">Reset graph</div>
+		<div id="savePlumbState" class="funcButton borderRadius" onclick="savePlumbState()">Save graph</div>
 		<div class="clearFix"></div>
 	</div>
 
@@ -21,14 +21,13 @@
     <div id="diagramContainer"></div>
     
     
-	<div id="infoContainer">Drag around the nodes as you like, then hit Save graph when your done. Want access it later? Just come back to this page, true story</div>
+	<div class="noSelect borderRadius" id="infoContainer">Drag around the nodes as you like, then hit Save graph when your done. Want access it later? Just come back to this page, true story</div>
 	<div onclick="hideInfo();" id="overlay"></div>
 	
 	    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jsPlumb/1.4.1/jquery.jsPlumb-1.4.1-all-min.js"></script>
-    <script src="processData.js" type="text/javascript"></script>
     <script src="scripts.js" type="text/javascript"></script>
     
 </body>

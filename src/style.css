@@ -10,6 +10,18 @@
             background-color: #f9f9f9;
         }
         
+        .noSelect{
+        	  -webkit-user-select: none;  /* Chrome all / Safari all */
+			  -moz-user-select: none;     /* Firefox all */
+			  -ms-user-select: none;      /* IE 10+ */
+        }
+        
+        .borderRadius{
+        	border-radius: 3px;
+        	-moz-border-radius: 3px;
+        	-ms-border-radius: 3px;
+        }
+        
         #overlay{
         	width: 100%;
         	height: 100%;
@@ -19,6 +31,7 @@
         	background-color: #000;
         	opacity: 0.4;
         	display: none;
+        	z-index: 1500;
         }
         
         #topPane{
@@ -29,6 +42,8 @@
         	height: 65px;
         	background-color: #f5f5f5;
         	border-bottom: 2px solid #e5e5e5;
+        	z-index: 10;
+        	opacity: 0.8;
         }
         
         #header{
@@ -40,7 +55,6 @@
         
         .funcButton{
         	float: right;
-        	border-radius: 2px;
         	padding: 8px 12px;
         	border: 1px solid #ccc;
         	background-color: #e5e5e5;
@@ -55,6 +69,12 @@
         	background-image: url(loader.gif);
         	background-repeat: no-repeat;
         	background-position: 90% 50%;
+        }
+        
+        .loadingDone{
+        	transition: all .5s;
+        	background-color: #50b220;
+        	color: #f9f9f9;
         }
 
         #info{
@@ -74,7 +94,6 @@
         	width: 175px;
         	padding: 20px;
         	background-color: #f5f5f5;
-        	border-radius: 3px;
         	border: 1px solid #e5e5e5;
         	position: fixed;
         	top: -200px;
@@ -117,7 +136,6 @@
        		padding: 3px 6px;
        		background-color: #ccc;
        		border: 1px solid #e5e5e5;
-       		border-radius: 2px;
        		color: #222;
        		margin-top: -30px !important;
        	}

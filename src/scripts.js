@@ -805,7 +805,7 @@ function buildGraphNodes(Objs){
 	$(states).each(function(index){
 		var stateNode = document.createElement("div");
 		stateNode.id = this.Id,
-		stateNode.className = "plumbNodeItem",
+		stateNode.className = "plumbNodeItem borderRadius",
 		stateNode.innerHTML = "<span>"+ this.StaticName +"</span>"
 		
 		$("#diagramContainer").append(stateNode);
@@ -864,8 +864,8 @@ function savePlumbState(){
 	    localStorage.setItem("plumbTestPositions", JSON.stringify(Objs));
 	    
 	    setTimeout(function(){
-	    	alterButton("savePlumbState", "Save state", "remove", "loading");
-	    }, 400);
+	    	alterButton("savePlumbState", "State saved", "remove", "loading");
+	    }, 600);
 }
 
 function loadPlumbState(){
@@ -881,6 +881,7 @@ function alterButton(id, label, state, className){
 	}
 	else if(className != undefined && state == "remove"){
 		$("#" + id).removeClass(className);
+		
 	}
 	
 }
